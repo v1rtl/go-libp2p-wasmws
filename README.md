@@ -5,7 +5,7 @@ A dial-only WebSocket transport that works with WebAssembly.
 ## Install
 
 ```sh
-go get github.com/talentlessguy/go-libp2p-wasmws
+go get github.com/v1rtl/go-libp2p-wasmws
 ```
 
 ## Usage
@@ -19,7 +19,7 @@ import (
         "log"
 
         "github.com/libp2p/go-libp2p"
-        wasmws "github.com/talentlessguy/go-libp2p-wasmws"
+        wasmws "github.com/v1rtl/go-libp2p-wasmws"
 
         "github.com/libp2p/go-libp2p/p2p/security/noise"
 )
