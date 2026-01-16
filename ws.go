@@ -26,15 +26,14 @@ var dialMatcher = mafmt.And(
 	mafmt.Base(ma.P_TCP),
 	mafmt.Or(
 		mafmt.Base(ma.P_WS),
+		mafmt.Base(ma.P_WSS),
 		mafmt.And(
-			mafmt.Or(
-				mafmt.And(
-					mafmt.Base(ma.P_TLS),
-					mafmt.Base(ma.P_SNI)),
-				mafmt.Base(ma.P_TLS),
-			),
+			mafmt.Base(ma.P_TLS),
+			mafmt.Base(ma.P_SNI),
 			mafmt.Base(ma.P_WS)),
-		mafmt.Base(ma.P_WSS)))
+		mafmt.And(
+			mafmt.Base(ma.P_TLS),
+			mafmt.Base(ma.P_WS))))
 
 type WebsocketTransport struct {
 	transport.Transport
